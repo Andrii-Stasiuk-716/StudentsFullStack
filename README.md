@@ -5,10 +5,12 @@ Dillinger requires [Node.js](https://nodejs.org/) v10+ to run.
 Install the dependencies and devDependencies and start the server.
 
 Note: you need to have installed `yarn` globally
+You need to run this command from root directore of the project and from `client/` folder inside project
 
 ```sh
 yarn install
 ```
+
 ## Launch
 
 ```sh
