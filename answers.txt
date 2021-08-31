@@ -1,0 +1,48 @@
+1) What would be a better way of showing the age of the students, instead of storing the age? How would that impact the database structure and the UI components?
+For example, In this assessment age will be kept like 23 or 24. What could be a better way?
+
+Answer: It's better to store user birth year inside database and just calculate age from Date.now(), so it will keep storing
+real age without updating it.
+
+2) Please, briefly explain how is the algorithm working on the left side? (Step by step if possible)
+Can you please indicate the way of sorting? (Ascending, Descending)
+Extra 1: Can you use this sorting code in your assessment. (Check View Students slide, sorting button implementation)
+Extra 2: How would you improve this algorithm?
+
+
+- it's similar to bubble sort
+- it's sorting from min to max values
+- in current project you can use it to sort by age or id(number)
+- you can improve it by using Big(O) notation, because loop inside loop is bad practice
+ To improve current sortin algorithm i will extract swapping logic in seperate function, also make two seperate loops insted 
+ nested loops (But cux it's like bubble, we need loop inside loop)
+
+ Example:
+ # ---------------------------------------------
+
+ let bubbleSort = (inputArr) => {
+  let len = inputArr.length;
+  let checked;
+  do {
+      checked = false;
+      for (let i = 0; i < len; i++) {
+          if (inputArr[i] > inputArr[i + 1]) {
+              let tmp = inputArr[i];
+              inputArr[i] = inputArr[i + 1];
+              inputArr[i + 1] = tmp;
+              checked = true;
+          }
+      }
+  } while (checked);
+  return inputArr;
+};
+# ---------------------------------------------
+  I would rather use another sorting algorithm like quick sort or heap sort
+
+
+ *****************************Notes*****************************
+
+ - I did not implement loading states(spinners, loaders etc.), global error handling on client side and other stuff like
+ global components to reuse(Done only for button), optimization etc, cuz it's not enough time, so there are many parts to improve.
+
+ - I did this task in 1 day
